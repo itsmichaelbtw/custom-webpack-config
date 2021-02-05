@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/assets/css/main.0f080d0f.css",
+    "main.js": "/assets/js/main.229f4936.js",
+    "runtime-main.js": "/assets/js/runtime-main.9bd6c274.js",
+    "vendors.js": "/assets/js/vendors.0b85d38d.js"
+  },
+  "entrypoints": [
+    "assets/js/runtime-main.9bd6c274.js",
+    "assets/js/vendors.0b85d38d.js",
+    "assets/css/main.0f080d0f.css",
+    "assets/js/main.229f4936.js"
+  ]
+}
