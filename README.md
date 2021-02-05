@@ -83,7 +83,7 @@ Read babels guide on customizing its configuration file: [BabelRC Guide](https:/
 
 You can modify LESS variables inside the Webpack configuration. Remember to include the `.less` file somewhere in your app
 
-```
+```js
     test: /\.less$/,
     use: [
         {
