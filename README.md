@@ -2,7 +2,7 @@
 
 A custom webpack configuration used without the CLI tool [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
-### npm install
+### `npm install`
 
 Installs required dependencies used for a react environment
 
