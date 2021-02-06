@@ -28,16 +28,16 @@ This config holds default values for your webpack configuration. Here you can ch
 
 Name | Value | Description | Default
 ---- | ----- | ----------- | -------
-name | String | The name of the website (this is also rendered inside the title tags) | "Custom Webpack Config"
-publicPath | String | Specify the base path for all assets | "/"
-buildDirectory | String | Output folder for the production build of your app | "dist"
-entry | String | Default entry file for your app | "./index.js"
-assetsFolder | String | Folder path for all assets once bundled | "assets"
-scriptFolder | String | Folder path for JS, JSX, TS and TSX files | "js"
-cssFolder | String | Folder path for all CSS files | "css"
-mediaFolder | String | Folder path for JSON, PNG, JPEG, JPG and GIF files | "media"
+name | String | The name of the website (this is also rendered inside the title tags) | Custom Webpack Config
+publicPath | String | Specify the base path for all assets | /
+buildDirectory | String | Output folder for the production build of your app | dist
+entry | String | Default entry file for your app | ./index.js
+assetsFolder | String | Folder path for all assets once bundled | assets
+scriptFolder | String | Folder path for JS, JSX, TS and TSX files | js
+cssFolder | String | Folder path for all CSS files | css
+mediaFolder | String | Folder path for JSON, PNG, JPEG, JPG and GIF files | media
 manifest.generate | true or false | Whether or not to generate a manifest file | true
-manifest.filename | String | Name of the manifest file | "manifest.json"
+manifest.filename | String | Name of the manifest file | manifest.json
 ignoreMoment | true or false | Whether to ignore the `moment.js` library commonly used by other dependencies | true
 maxChunkSize | Number | A positive integer in bytes indicating when to split dependency chunks | 300000
 devtool | eval or false [...more values](https://webpack.js.org/configuration/devtool/) | Control how devtools are used in your app | false
