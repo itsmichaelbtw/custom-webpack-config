@@ -2,6 +2,8 @@
 
 A custom webpack configuration used without the CLI tool [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
+Feel free to template this configuration, just remember to change the `README` and update the `app.json` to your liking
+
 ### `npm install`
 
 Installs required dependencies used for a react environment
