@@ -74,6 +74,7 @@ Supported file types which can be used in this config
 * PNG
 * JPEG and JPG
 * GIF
+* SVG
 
 More file extensions will be added in the future
 
