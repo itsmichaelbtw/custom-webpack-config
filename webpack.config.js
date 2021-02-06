@@ -95,14 +95,6 @@ module.exports = function (env) {
         module: {
             rules: [
                 {
-                    test: [/\.png$/, /\.jpeg$/, /\.jpg$/, /\.gif$/],
-                    loader: require.resolve("url-loader"),
-                    options: {
-                        limit: "10000",
-                        name: `${PackageJson.assetsFolder}/${PackageJson.mediaFolder}/[name].[contenthash:8].[ext]`
-                    }
-                },
-                {
                     test: /\.(js|jsx|ts|tsx)$/,
                     exclude: /node_modules/,
                     loader: require.resolve("babel-loader"),
@@ -147,7 +139,7 @@ module.exports = function (env) {
                     loader: require.resolve("file-loader"),
                     exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.css$/, /\.less$/],
                     options: {
-                        name: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name].[contenthash:8].[ext]`
+                        name: `${PackageJson.assetsFolder}/${PackageJson.mediaFolder}/[name].[contenthash:8].[ext]`
                     }
                 }
             ]
@@ -156,7 +148,7 @@ module.exports = function (env) {
             new HtmlWebpackPlugin(Object.assign({}, {
                 template: PackageJson.htmlLocation,
                 title: PackageJson.name,
-            }, isEnvProduction && { 
+            }, isEnvProduction && {
                 minify: {
                     removeComments: true,
                     collapseWhitespace: true,
@@ -206,5 +198,3 @@ module.exports = function (env) {
         }
     }
 }
-
-
