@@ -2,27 +2,27 @@
 
 A custom webpack configuration used without the CLI tool [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 
-### `npm install`
+### npm install
 
 Installs required dependencies used for a react environment
 
-### `npm start`
+### npm start
 
 Opens the app in development mode on localhost:3000. The browser will automatically open your app and reload if you make edits
 
 The port can be changed in the `app.json` config
 
-### `npm test`
+### npm test
 
 Opens the app in a production mode on localhost 3000. This helps to identity production mode bugs that may not occur during development
 
-### `npm build`
+### npm build
 
 Bundles your app into a production ready folder. The default build location is `dist` which can be changed in the `app.json` config
 
 The build is minified and is optimized for the best performance
 
-### `app.json`
+### app.json
 
 This config holds default values for your webpack configuration. Here you can change values to adjust accordingly to your desire
 
@@ -43,21 +43,21 @@ maxChunkSize | Number | A positive integer in bytes indicating when to split dep
 devtool | eval or false [...more values](https://webpack.js.org/configuration/devtool/) | Control how devtools are used in your app | false
 port | Number | Port used on localhost when in development | 3000
 
-### `Caching`
+### Caching
 
 Each and every file in your app uses a `contenthash` in order to optimize for browser caching, resulting in faster page loads on your website
 
-### `Code Splitting`
+### Code Splitting
 
 The configuration will seperate main code from dependency code allowing for faster loads and caching of vendor files.
 
 Vendor files are split every 200kb in order to optimize for chunk splitting and caching
 
-### `Folder Structure`
+### Folder Structure
 
 You can use any folder structure you like. Your app isn't bound to a `src` directory. Just remember to update any values inside of `app.json` if you aren't using a `src` directory as HTML pages and other file types may not be found when bundled by Webpack
 
-### `Extension Supports`
+### Extension Supports
 
 Supported file types which can be used in this config
 
@@ -75,11 +75,11 @@ Supported file types which can be used in this config
 
 More file extensions will be added in the future
 
-### `.babelrc`
+### .babelrc
 
 Read babels guide on customizing its configuration file: [BabelRC Guide](https://babeljs.io/docs/en/config-files)
 
-### `LESS Variables`
+### LESS Variables
 
 You can modify LESS variables inside the Webpack configuration. Remember to include the `.less` file somewhere in your app
 
