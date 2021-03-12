@@ -14,7 +14,7 @@ Opens the app in development mode on localhost:3000. The browser will automatica
 
 The port can be changed in the `app.json` config
 
-### npm test
+### npm run test
 
 Opens the app in a production mode on localhost 3000. This helps to identity production mode bugs that may not occur during development
 
@@ -31,6 +31,7 @@ This config holds default values for your webpack configuration. Here you can ch
 Name | Value | Description | Default
 ---- | ----- | ----------- | -------
 name | String | The name of the website (this is also rendered inside the title tags) | Custom Webpack Config
+version | String | Version of your application (this is also appended to the end of your bundled files) | 0.0.0
 publicPath | String | Specify the base path for all assets | /
 buildDirectory | String | Output folder for the production build of your app | dist
 entry | String | Default entry file for your app | ./index.js
