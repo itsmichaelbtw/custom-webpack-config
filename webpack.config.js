@@ -20,8 +20,8 @@ module.exports = function (env) {
         entry: PackageJson.entry,
         output: {
             path: path.resolve(__dirname, PackageJson.buildDirectory),
-            filename: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name].[contenthash:8].js`,
-            chunkFilename: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name].[contenthash:8].chunk.js`,
+            filename: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name]~${PackageJson.version}.js`,
+            chunkFilename: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name]~${PackageJson.version}.chunk.js`,
             publicPath: "/",
             chunkLoadingGlobal: `jsonp${PackageJson.name}`,
             globalObject: "this"
@@ -129,7 +129,7 @@ module.exports = function (env) {
                     loader: require.resolve("file-loader"),
                     exclude: [/\.(js|mjs|jsx|ts|tsx)$/, /\.html$/, /\.json$/, /\.css$/, /\.less$/],
                     options: {
-                        name: `${PackageJson.assetsFolder}/${PackageJson.mediaFolder}/[name].[contenthash:8].[ext]`
+                        name: `${PackageJson.assetsFolder}/${PackageJson.mediaFolder}/[name]~${PackageJson.version}.[ext]`
                     }
                 }
             ]
@@ -154,7 +154,7 @@ module.exports = function (env) {
             })),
             !isEnvProduction && new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
-                filename: `${PackageJson.assetsFolder}/${PackageJson.cssFolder}/[name].[contenthash:8].css`
+                filename: `${PackageJson.assetsFolder}/${PackageJson.cssFolder}/[name]~${PackageJson.version}.css`
             }),
             PackageJson.manifest.generate && new ManifestPlugin.WebpackManifestPlugin({
                 fileName: PackageJson.manifest.filename,

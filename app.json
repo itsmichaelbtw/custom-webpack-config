@@ -1,5 +1,6 @@
 {
     "name": "Custom Webpack Config",
+    "version": "0.0.0",
     "publicPath": "/",
     "buildDirectory": "dist",
     "entry": "./index.js",
