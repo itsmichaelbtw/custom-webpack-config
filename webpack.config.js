@@ -68,21 +68,11 @@ module.exports = function (env) {
                 })
             ],
             splitChunks: {
-                chunks: "all",
-                name: "vendor",
+                chunks: "initial",
+                name: "commons",
                 maxSize: PackageJson.maxChunkSize,
-                cacheGroups: {
-                    commons: {
-                        test: /[\\/]node_modules[\\/]/,
-                        name: "vendors",
-                        chunks: "all"
-                    },
-                    defaultVendors: {
-                        test: /[\\/]node_modules[\\/]/,
-                        priority: -10,
-                        reuseExistingChunk: true
-                    }
-                }
+                minChunks: 1,
+                hidePathInfo: true
             },
             runtimeChunk: {
                 name: entryPoint => `runtime-${entryPoint.name}`
