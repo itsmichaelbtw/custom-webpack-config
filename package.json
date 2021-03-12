@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/miikeyui/custom-webpack-config.git"
+    "url": "git+https://github.com/itsmichaelbtw/custom-webpack-config.git"
   },
   "author": "https://mikeyui.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/miikeyui/custom-webpack-config/issues"
+    "url": "https://github.com/itsmichaelbtw/custom-webpack-config/issues"
   },
-  "homepage": "https://github.com/miikeyui/custom-webpack-config#readme",
+  "homepage": "https://github.com/itsmichaelbtw/custom-webpack-config#readme",
   "dependencies": {
     "@babel/core": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
