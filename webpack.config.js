@@ -164,8 +164,7 @@ module.exports = function (env) {
             })),
             !isEnvProduction && new webpack.HotModuleReplacementPlugin(),
             new MiniCssExtractPlugin({
-                filename: `${PackageJson.assetsFolder}/${PackageJson.cssFolder}/[name].[contenthash:8].css`,
-                chunkFilename: `${PackageJson.assetsFolder}/${PackageJson.cssFolder}/[name].[contenthash:8].chunk.css`
+                filename: `${PackageJson.assetsFolder}/${PackageJson.cssFolder}/[name].[contenthash:8].css`
             }),
             PackageJson.manifest.generate && new ManifestPlugin.WebpackManifestPlugin({
                 fileName: PackageJson.manifest.filename,
