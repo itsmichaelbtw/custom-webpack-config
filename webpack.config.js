@@ -9,10 +9,6 @@ const webpack = require("webpack")
 const ManifestPlugin = require("webpack-manifest-plugin")
 const PackageJson = require("./app.json")
 
-const appendPrefix = function(path){
-
-}
-
 module.exports = function (env) {
     const nodeEnv = env.NODE_ENV
     const isEnvProduction = nodeEnv === "production" ? true : false
