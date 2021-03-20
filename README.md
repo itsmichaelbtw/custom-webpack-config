@@ -40,11 +40,11 @@ assetsFolder | String | Folder path for all assets once bundled | assets
 scriptFolder | String | Folder path for JS, JSX, TS and TSX files | js
 cssFolder | String | Folder path for all CSS files | css
 mediaFolder | String | Folder path for JSON, PNG, JPEG, JPG and GIF files | media
-manifest.generate | true or false | Whether or not to generate a manifest file | true
+manifest.generate | Boolean | Whether or not to generate a manifest file | true
 manifest.filename | String | Name of the manifest file | manifest.json
-ignoreMoment | true or false | Whether to ignore the `moment.js` library commonly used by other dependencies | true
+ignoreMoment | Boolean | Whether to ignore the `moment.js` library commonly used by other dependencies | true
 maxChunkSize | Number | A positive integer in bytes indicating when to split dependency chunks | 300000
-devtool | eval or false [...more values](https://webpack.js.org/configuration/devtool/) | Control how devtools are used in your app | false
+devtool | String [...more values](https://webpack.js.org/configuration/devtool/) | Control how devtools are used in your app | false
 port | Number | Port used on localhost when in development | 3000
 
 ### Caching
