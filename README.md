@@ -18,7 +18,7 @@ The port can be changed in the `app.json` config
 
 Opens the app in a production mode on localhost 3000. This helps to identity production mode bugs that may not occur during development
 
-### npm build
+### npm run build
 
 Bundles your app into a production ready folder. The default build location is `dist` which can be changed in the `app.json` config
 
