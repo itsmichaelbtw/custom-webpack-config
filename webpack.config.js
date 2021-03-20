@@ -9,6 +9,10 @@ const webpack = require("webpack")
 const ManifestPlugin = require("webpack-manifest-plugin")
 const PackageJson = require("./app.json")
 
+const appendPrefix = function(path){
+
+}
+
 module.exports = function (env) {
     const nodeEnv = env.NODE_ENV
     const isEnvProduction = nodeEnv === "production" ? true : false
@@ -138,6 +142,7 @@ module.exports = function (env) {
             new HtmlWebpackPlugin(Object.assign({}, {
                 template: PackageJson.htmlLocation,
                 title: PackageJson.name,
+                publicPath: PackageJson.assetPrefix
             }, isEnvProduction && {
                 minify: {
                     removeComments: true,

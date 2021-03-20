@@ -5,6 +5,7 @@
     "buildDirectory": "dist",
     "entry": "./index.js",
     "htmlLocation": "./src/index.html",
+    "assetPrefix": "",
     "assetsFolder": "assets",
     "scriptFolder": "js",
     "cssFolder": "css",
