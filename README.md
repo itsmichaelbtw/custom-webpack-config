@@ -35,6 +35,7 @@ version | String | Version of your application (this is also appended to the end
 publicPath | String | Specify the base path for all assets | /
 buildDirectory | String | Output folder for the production build of your app | dist
 entry | String | Default entry file for your app | ./index.js
+assetPrefix | String | Set up an asset prefix by providing your CDN | ""
 assetsFolder | String | Folder path for all assets once bundled | assets
 scriptFolder | String | Folder path for JS, JSX, TS and TSX files | js
 cssFolder | String | Folder path for all CSS files | css
