@@ -22,8 +22,8 @@ module.exports = function (env) {
             path: path.resolve(__dirname, PackageJson.buildDirectory),
             filename: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name]~${PackageJson.version}.js`,
             chunkFilename: `${PackageJson.assetsFolder}/${PackageJson.scriptFolder}/[name]~${PackageJson.version}.chunk.js`,
-            publicPath: "/",
-            chunkLoadingGlobal: `jsonp${PackageJson.name}`,
+            publicPath: PackageJson.publicPath,
+            chunkLoadingGlobal: `jsonp${PackageJson.name.replace(" ", "")}`,
             globalObject: "this"
         },
         optimization: {
@@ -117,7 +117,7 @@ module.exports = function (env) {
                             options: {
                                 lessOptions: {
                                     modifyVars: {
-
+                                        "primary-color": "#6A70B8"
                                     },
                                     javascriptEnabled: true
                                 }
@@ -137,8 +137,7 @@ module.exports = function (env) {
         plugins: [
             new HtmlWebpackPlugin(Object.assign({}, {
                 template: PackageJson.htmlLocation,
-                title: PackageJson.name,
-                publicPath: PackageJson.assetPrefix
+                title: `${PackageJson.name} - v${PackageJson.version}`,
             }, isEnvProduction && {
                 minify: {
                     removeComments: true,
@@ -159,7 +158,7 @@ module.exports = function (env) {
             }),
             PackageJson.manifest.generate && new ManifestPlugin.WebpackManifestPlugin({
                 fileName: PackageJson.manifest.filename,
-                publicPath: "/",
+                publicPath: PackageJson.publicPath,
                 generate: (seed, files, entrypoints) => {
                     const manifestFiles = files.reduce((manifest, file) => {
                         manifest[file.name] = file.path;
